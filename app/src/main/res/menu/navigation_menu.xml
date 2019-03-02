@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_menu"
+        android:title="Ana Menüye Dön"
+        android:icon="@drawable/anamenu"
+        ></item>
+
+    <item
+        android:id="@+id/navigation_account"
+        android:title="Hesabım"
+        android:icon="@drawable/hesabim"
+        ></item>
+    <item
+        android:id="@+id/navigation_message"
+        android:title="Mesajlar"
+        android:icon="@drawable/message"></item>
+    <item
+        android:id="@+id/navigation_categories"
+        android:title="Kategoriler"
+        android:icon="@drawable/menu"
+        ></item>
+
+    <item
+        android:id="@+id/navigation_addProduct"
+        android:title="Satılık Ürün Ekle"
+        android:icon="@drawable/urunsaticon">
+    </item>
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:title="Ayarlar"
+        android:icon="@drawable/ayarlar">
+    </item>
+
+
+
+
+</menu>

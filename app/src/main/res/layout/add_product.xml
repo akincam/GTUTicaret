@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/drawerLayout"
+    android:background="@drawable/arkaplan">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/spinner1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/spinner1"
+        android:background="@drawable/urunkategori"
+        android:gravity="center" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:entries="@array/country_arrays" />
+
+    <ImageView
+        android:id="@+id/nameimg"
+        android:background="@drawable/urunadi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="20dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/nameimg"
+        android:textAlignment="center"
+        android:hint="Ürün İsmi Girin"
+        android:maxLines="1"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:maxLength="25"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/descriptionimg"
+        android:background="@drawable/urunozellik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nameimg"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="20dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:hint="Ürün Tanımlaması Girin"
+        android:textAlignment="center"
+        android:maxLength="100"
+        android:layout_below="@+id/descriptionimg"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/priceimg"
+        android:background="@drawable/urunfiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nameimg"
+        android:layout_below="@+id/description"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/editPrice"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Fiyat Giriniz"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:layout_below="@+id/priceimg"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_below="@+id/editPrice"
+        android:background="@drawable/fotoekle"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="addImage"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/urunsat"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="addProductToList"
+        />
+
+
+</RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/arkaplannav"
+        android:theme="@style/NavigationTheme"
+        app:itemBackground="@drawable/itembackground"
+        app:itemIconTint="@android:color/black"
+        app:menu="@menu/navigation_menu">
+
+
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
